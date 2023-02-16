@@ -1,0 +1,312 @@
+@import '../../../../style-var/index.scss';
+
+.#{$cls-prefix}-tabs {
+  @mixin tabs-after {
+    position: absolute;
+    z-index: -1;
+    content: '';
+    background-color: $ccui-base-bg;
+  }
+
+  @mixin tabs-item {
+    padding: 4px 20px;
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  .#{$cls-prefix}-tabs-nav {
+    &--top,
+    &--bottom {
+      position: relative;
+      display: flex;
+
+      &::after {
+        @include tabs-after;
+
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+      }
+
+      &-item {
+        @include tabs-item;
+
+        border-bottom: 2px solid transparent;
+      }
+
+      &-item-active {
+        color: $ccui-primary;
+        border-bottom-color: $ccui-primary;
+      }
+    }
+
+    &--left,
+    &--right {
+      position: relative;
+      display: block;
+      height: 100%;
+
+      &::after {
+        @include tabs-after;
+
+        top: 0;
+        width: 2px;
+        height: 100%;
+      }
+
+      &-item {
+        @include tabs-item;
+      }
+
+      &-item-active {
+        color: $ccui-primary;
+      }
+    }
+
+    &--left {
+      float: left;
+
+      &::after {
+        right: 0;
+      }
+
+      &-item {
+        border-right: 2px solid transparent;
+      }
+
+      &-item-active {
+        border-right-color: $ccui-primary;
+      }
+    }
+
+    &--right {
+      float: right;
+
+      &::after {
+        left: 0;
+      }
+
+      &-item {
+        border-left: 2px solid transparent;
+      }
+
+      &-item-active {
+        border-left-color: $ccui-primary;
+      }
+    }
+  }
+
+  .#{$cls-prefix}-tabs-nav-card {
+    &--top,
+    &--bottom {
+      position: relative;
+      display: flex;
+
+      &::after {
+        @include tabs-after;
+
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+      }
+
+      &-item {
+        @include tabs-item;
+
+        border: 1px solid $ccui-line;
+        border-left: none;
+        border-bottom: 2px solid transparent;
+
+        &:first-of-type {
+          border: 1px solid $ccui-line;
+          border-top-left-radius: $ccui-border-radius;
+        }
+
+        &:last-of-type {
+          border-top-right-radius: $ccui-border-radius;
+        }
+      }
+
+      &-item-active {
+        color: $ccui-primary;
+        border-bottom-color: $ccui-primary;
+      }
+    }
+
+    &--left,
+    &--right {
+      position: relative;
+      display: block;
+      height: 100%;
+
+      &::after {
+        @include tabs-after;
+
+        top: 0;
+        width: 2px;
+        height: 100%;
+      }
+
+      &-item {
+        @include tabs-item;
+
+        border: 1px solid $ccui-line;
+      }
+
+      &-item-active {
+        color: $ccui-primary;
+      }
+    }
+
+    &--left {
+      float: left;
+
+      &::after {
+        right: 0;
+      }
+
+      &-item {
+        border-right: 2px solid transparent;
+
+        &:first-of-type {
+          border-top-left-radius: $ccui-border-radius;
+        }
+
+        &:last-of-type {
+          border-bottom-left-radius: $ccui-border-radius;
+        }
+      }
+
+      &-item-active {
+        border-right-color: $ccui-primary;
+      }
+    }
+
+    &--right {
+      float: right;
+
+      &::after {
+        left: 0;
+      }
+
+      &-item {
+        border-left: 2px solid transparent;
+
+        &:first-of-type {
+          border-top-right-radius: $ccui-border-radius;
+        }
+
+        &:last-of-type {
+          border-bottom-right-radius: $ccui-border-radius;
+        }
+      }
+
+      &-item-active {
+        border-left-color: $ccui-primary;
+      }
+    }
+  }
+
+  .#{$cls-prefix}-tabs-nav-border-card {
+    &--top,
+    &--bottom {
+      position: relative;
+      display: flex;
+      background: $ccui-info-bg;
+      border: 1px solid $ccui-line;
+
+      &::after {
+        @include tabs-after;
+
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+      }
+
+      &-item {
+        @include tabs-item;
+      }
+
+      &-item-active {
+        color: $ccui-primary;
+        background: $ccui-base-bg;
+        border-right: 1px solid $ccui-line;
+        border-left: 1px solid $ccui-line;
+      }
+    }
+
+    &--top {
+      margin-bottom: -1px;
+      border-bottom: 1px solid transparent;
+    }
+
+    &--bottom {
+      &-item-active {
+        margin-top: -1px;
+        border-top: 1px solid transparent;
+      }
+    }
+
+    &--left,
+    &--right {
+      position: relative;
+      display: block;
+      height: 100%;
+      background: $ccui-base-bg;
+      border: 1px solid $ccui-line;
+
+      &::after {
+        @include tabs-after;
+
+        top: 0;
+        width: 2px;
+        height: 100%;
+      }
+
+      &-item {
+        @include tabs-item;
+      }
+
+      &-item-active {
+        color: $ccui-primary;
+        background: $ccui-base-bg;
+      }
+    }
+
+    &--left {
+      float: left;
+
+      &::after {
+        right: 0;
+      }
+
+      &-item-active {
+        margin-right: -1px;
+        border-top: 1px solid $ccui-line;
+        border-right: 1px solid transparent;
+        border-bottom: 1px solid $ccui-line;
+      }
+    }
+
+    &--right {
+      float: right;
+
+      &::after {
+        left: 0;
+      }
+
+      &-item-active {
+        margin-left: -1px;
+        border-top: 1px solid $ccui-line;
+        border-bottom: 1px solid $ccui-line;
+        border-left: 1px solid transparent;
+      }
+    }
+  }
+}
+

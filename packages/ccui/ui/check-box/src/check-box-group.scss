@@ -1,0 +1,24 @@
+@import '../../style-var/index.scss';
+
+.#{$cls-prefix}-check-box-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  &.is-row {
+    flex-direction: row;
+  }
+
+  &.is-column {
+    flex-direction: column;
+  }
+
+  .#{$cls-prefix}-check-box {
+    line-height: 28px;
+
+    &:not(:last-child) {
+      padding-right: 20px;
+    }
+  }
+}

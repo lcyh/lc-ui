@@ -1,0 +1,19 @@
+@import '../../style-var/index.scss';
+
+.#{$cls-prefix}-avatar {
+  display: inline-block;
+
+  &__style {
+    display: inline-block;
+    color: rgb(0 0 0 / 50%);
+    text-align: center;
+  }
+
+  &--background-0 {
+    background-color: #ff8b87;
+  }
+
+  &--background-1 {
+    background-color: #7693f5;
+  }
+}

@@ -1,0 +1,9 @@
+@import '../../style-var/index.scss';
+
+.#{$cls-prefix}-tree {
+  color: $ccui-text;
+
+  &-node__content--value-wrapper {
+    display: flex;
+  }
+}
