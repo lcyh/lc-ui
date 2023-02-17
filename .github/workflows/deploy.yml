@@ -2,18 +2,17 @@ name: deploy-docs
 
 on:
   push:
-    branches: [ "master" ]
+    branches: ['master']
   pull_request:
-    branches: [ "master" ]
+    branches: ['master']
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     strategy:
       matrix:
-        node-version: [ 16.x ]
+        node-version: [16.x]
 
     steps:
       - name: Checkout
@@ -39,5 +38,7 @@ jobs:
       - name: Deploy-docs
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./packages/ccui/docs/.vitepress/dist
+          github_token: ${{ secrets.ACCESS_TOKEN }}
+          deploy_key: ${{ secrets.ACCESS_TOKEN }}
+          personal_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./packages/lcui/docs/.vitepress/dist

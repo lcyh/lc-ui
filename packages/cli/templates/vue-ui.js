@@ -1,3 +1,11 @@
+/*
+ * @Author: changluo
+ * @Description:
+ * @LastEditors: luc19964 luochang@gopherasset.com
+ * @Date: 2023-02-16 17:16:21
+ * @LastEditTime: 2023-02-16 17:26:06
+ * @FilePath: /lcui/packages/cli/templates/vue-ui.js
+ */
 const { relative } = require('path');
 const { INDEX_FILE_NAME, VERSION, VUE_UI_FILE } = require('../shared/constant');
 
@@ -36,7 +44,7 @@ export {
 };
 
 export default {
-  version: '1.0.8',
+  version: '1.0.0',
   install(app: App): void {
     installs.forEach((p) => app.use(p));
   }

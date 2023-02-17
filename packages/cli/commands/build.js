@@ -7,8 +7,8 @@ const vueJsx = require('@vitejs/plugin-vue-jsx');
 const nuxtBuild = require('./build-nuxt-auto-import');
 const { isReadyToRelease } = require('../shared/utils');
 
-const entryDir = path.resolve(__dirname, '../../ccui/ui');
-const outputDir = path.resolve(__dirname, '../../ccui/build');
+const entryDir = path.resolve(__dirname, '../../lcui/ui');
+const outputDir = path.resolve(__dirname, '../../lcui/build');
 
 const baseConfig = defineConfig({
   configFile: false,
@@ -50,9 +50,9 @@ const buildAll = async () => {
       build: {
         rollupOptions,
         lib: {
-          entry: path.resolve(entryDir, 'vue-ccui.ts'),
-          name: 'VueCcui',
-          fileName: 'vue-ccui',
+          entry: path.resolve(entryDir, 'vue-lcui.ts'),
+          name: 'VueLcui',
+          fileName: 'vue-lcui',
           formats: ['es', 'umd']
         },
         outDir: outputDir

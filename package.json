@@ -2,8 +2,8 @@
   "name": "root",
   "private": true,
   "scripts": {
-    "dev": "pnpm --filter vue3-ccui dev",
-    "docs:build": "pnpm --filter vue3-ccui predev -- prod && pnpm --filter vue3-ccui docs:build",
+    "dev": "pnpm --filter vue3-lcui dev",
+    "docs:build": "pnpm --filter vue3-lcui predev -- prod && pnpm --filter vue3-lcui docs:build",
     "lint": "pnpm run lint:script && pnpm run lint:style",
     "lint:script": "eslint --ext \"packages/**/*.{vue,js,jsx,ts,tsx}\" --fix --quiet ./",
     "lint:style": "stylelint --fix \"packages/**/*.{css,scss}\"",

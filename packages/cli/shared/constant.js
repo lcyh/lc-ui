@@ -1,19 +1,27 @@
+/*
+ * @Author: changluo
+ * @Description:
+ * @LastEditors: luc19964 luochang@gopherasset.com
+ * @Date: 2023-02-16 17:16:21
+ * @LastEditTime: 2023-02-16 17:37:20
+ * @FilePath: /lcui/packages/cli/shared/constant.js
+ */
 const { resolve } = require('path');
 const { version } = require('../package.json');
 
 exports.VERSION = version;
 exports.isProd = process.env.NODE_ENV === 'production';
 exports.CWD = process.cwd();
-exports.UI_DIR = resolve(this.CWD, '../ccui/ui');
+exports.UI_DIR = resolve(this.CWD, '../lcui/ui');
 exports.UI_NAMESPACE = 'c';
-exports.CSS_CLASS_PREFIX = 'ccui';
+exports.CSS_CLASS_PREFIX = 'lcui';
 exports.TESTS_DIR_NAME = 'test';
 exports.INDEX_FILE_NAME = 'index.ts';
 exports.DOCS_FILE_NAME = 'index.md';
 exports.VUE_UI_IGNORE_DIRS = ['shared', 'style'];
-exports.VUE_UI_FILE_NAME = 'vue-ccui.ts';
+exports.VUE_UI_FILE_NAME = 'vue-lcui.ts';
 exports.VUE_UI_FILE = resolve(this.UI_DIR, this.VUE_UI_FILE_NAME);
-exports.SITES_DIR = resolve(this.CWD, '../ccui/docs');
+exports.SITES_DIR = resolve(this.CWD, '../lcui/docs');
 exports.SITES_COMPONENTS_DIR_NAME = 'components';
 exports.SITES_COMPONENTS_DIR_NAME_EN = 'en-US/components';
 exports.SITES_COMPONENTS_DIR = resolve(
@@ -73,7 +81,7 @@ exports.COMPONENT_PARTS_MAP = [
 
 exports.CREATE_SUPPORT_TYPE_MAP = Object.freeze({
   component: 'component',
-  ccui: 'ccui'
+  lcui: 'lcui'
 });
 exports.CREATE_SUPPORT_TYPES = Object.keys(this.CREATE_SUPPORT_TYPE_MAP);
 exports.CREATE_UNFINISHED_TYPES = [];

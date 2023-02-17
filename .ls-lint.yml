@@ -2,7 +2,7 @@ ls:
   packages/*:
     .dir: kebab-case | regex:__[a-z0-9]+__
     .scss: kebab-case # 对所有 scss 文件使用 kebab-case 形式
-    .vue: kebab-case | pascalcase  # vue 组件推荐 大写字母开头 额外配置 pascalcase
+    .vue: kebab-case | pascalcase # vue 组件推荐 大写字母开头 额外配置 pascalcase
     .js: kebab-case
     .ts: kebab-case
     .tsx: kebab-case
@@ -13,10 +13,10 @@ ls:
     .config.ts: kebab-case
 
 ignore:
-  # ccui
-  - packages/ccui/node_modules
-  - packages/ccui/docs
-  - packages/ccui/build
-  - packages/ccui/ui/theme
+  # lcui
+  - packages/lcui/node_modules
+  - packages/lcui/docs
+  - packages/lcui/build
+  - packages/lcui/ui/theme
   - packages/cli/node_modules
   - packages/build

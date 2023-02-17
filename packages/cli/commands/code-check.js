@@ -1,3 +1,11 @@
+/*
+ * @Author: changluo
+ * @Description:
+ * @LastEditors: luc19964 luochang@gopherasset.com
+ * @Date: 2023-02-16 17:16:21
+ * @LastEditTime: 2023-02-16 17:35:37
+ * @FilePath: /lcui/packages/cli/commands/code-check.js
+ */
 const path = require('path');
 const fs = require('fs');
 const shell = require('shelljs');
@@ -10,7 +18,7 @@ const chalkEslint = chalk.hex('#4b32c3');
 
 const chalkUnitTest = chalk.hex('#99425b');
 
-const entryDir = path.resolve(__dirname, '../../ccui/ui');
+const entryDir = path.resolve(__dirname, '../../lcui/ui');
 
 const completeComponents = fs.readdirSync(entryDir).filter((name) => {
   const componentDir = path.resolve(entryDir, name);
@@ -55,7 +63,7 @@ const eslintCheck = async (components) => {
 const unitTestSingle = async (name) => {
   log(chalkUnitTest(`Start unit test ${name}...`));
   await shell.exec(
-    `pnpm test --filter ccui -- --colors --noStackTrace --testMatch **/${name}/**/{*.spec.ts,*.spec.tsx}`
+    `pnpm test --filter lcui -- --colors --noStackTrace --testMatch **/${name}/**/{*.spec.ts,*.spec.tsx}`
   );
   log(chalkUnitTest(`Unit test ${name} finished!`));
 };

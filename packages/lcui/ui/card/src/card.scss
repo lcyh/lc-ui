@@ -1,0 +1,31 @@
+@import '../../style-var/index.scss';
+
+.#{$cls-prefix}-card {
+  overflow: hidden;
+  color: $lcui-text;
+  background: $lcui-global-bg-normal;
+  border: 1px solid $lcui-line;
+  border-radius: $lcui-border-radius-card;
+  transition: 0.3s;
+
+  &--header {
+    box-sizing: border-box;
+    padding: 18px 20px;
+    border-bottom: 1px solid $lcui-dividing-line;
+  }
+}
+
+.#{$cls-prefix}-card--always-shadow {
+  box-shadow: $lcui-shadow-length-connected-overlay rgb(0 0 0 / 10%);
+}
+
+.#{$cls-prefix}-card--hover-shadow {
+  &:hover,
+  &:focus {
+    box-shadow: $lcui-shadow-length-connected-overlay rgb(0 0 0 / 10%);
+  }
+}
+
+.#{$cls-prefix}-card--never-shadow {
+  box-shadow: none;
+}

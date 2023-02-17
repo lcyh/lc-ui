@@ -1,13 +1,13 @@
 {
-  "name": "ccui-cli",
+  "name": "lcui-cli",
   "version": "1.0.0",
-  "description": "ccui-cli",
+  "description": "lcui-cli",
   "keywords": [
     "cli"
   ],
   "author": "cjz",
   "license": "MIT",
-  "main": "lib/ccui-cli.js",
+  "main": "lib/lcui-cli.js",
   "directories": {
     "lib": "lib"
   },
@@ -17,19 +17,19 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/vaebe/ccui.git"
+    "url": "https://github.com/lcyh/lc-ui.git"
   },
   "scripts": {
     "build": "pnpm generate:theme && node --max-old-space-size=4096 node_modules/vitepress/bin/vitepress.js build docs && cp public/* docs/.vitepress/dist/assets && cp docs/assets/* docs/.vitepress/dist/assets",
-    "build:lib": "pnpm --filter vue3-ccui predev -- prod && pnpm build:components && pnpm changelog && pnpm release",
+    "build:lib": "pnpm --filter vue3-lcui predev -- prod && pnpm build:components && pnpm changelog && pnpm release",
     "build:components": "node ./index.js build",
     "generate:theme": "node ./index.js generate:theme",
     "generate:dts": "node ./index.js generate:dts",
     "release": "node ./index.js release",
     "cli": "node ./index.js create",
     "cli:create": "node ./index.js create -t component",
-    "prebuild": "node ./index.js create -t ccui --ignore-parse-error",
-    "changelog": "conventional-changelog -k '../ccui/package.json' -p angular -i CHANGELOG.md -s"
+    "prebuild": "node ./index.js create -t lcui --ignore-parse-error",
+    "changelog": "conventional-changelog -k '../lcui/package.json' -p angular -i CHANGELOG.md -s"
   },
   "dependencies": {
     "lodash": "^4.17.21"

@@ -1,11 +1,19 @@
+/*
+ * @Author: changluo
+ * @Description:
+ * @LastEditors: luc19964 luochang@gopherasset.com
+ * @Date: 2023-02-16 17:16:21
+ * @LastEditTime: 2023-02-17 15:25:02
+ * @FilePath: /lcui/packages/cli/commands/release.js
+ */
 const path = require('path');
 const fsExtra = require('fs-extra');
 const { omit } = require('lodash');
 const shell = require('shelljs');
 
-const outputDir = path.resolve(__dirname, '../../ccui/build');
+const outputDir = path.resolve(__dirname, '../../lcui/build');
 
-const packageJson = require('../../ccui/package.json');
+const packageJson = require('../../lcui/package.json');
 
 const getVersion = (version) => {
   if (version) {
@@ -35,17 +43,17 @@ const createPackageJson = async (version) => {
 exports.release = async ({ version }) => {
   await createPackageJson(version);
   shell.sed('-i', 'workspace:', '', path.resolve(outputDir, 'package.json'));
-  shell.cp('-R', path.resolve(__dirname, '../../ccui/README.md'), outputDir);
+  shell.cp('-R', path.resolve(__dirname, '../../lcui/README.md'), outputDir);
   shell.cd(outputDir);
   shell.mkdir('-p', 'theme');
   shell.cp(
     '-R',
-    path.resolve(__dirname, '../../ccui/ui/theme/theme.scss'),
+    path.resolve(__dirname, '../../lcui/ui/theme/theme.scss'),
     path.resolve(outputDir, 'theme')
   );
   shell.cp(
     '-R',
-    path.resolve(__dirname, '../../ccui/ui/theme/darkTheme.css'),
+    path.resolve(__dirname, '../../lcui/ui/theme/darkTheme.css'),
     path.resolve(outputDir, 'theme')
   );
   // shell.exec('npm publish');

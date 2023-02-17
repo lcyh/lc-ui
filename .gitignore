@@ -24,15 +24,15 @@ pnpm-debug.log*
 *.sw?
 *.zip
 
-packages/ccui/ui/vue-ccui.ts
-packages/ccui/ui/theme/theme.scss
-packages/ccui/ui/theme/darkTheme.css
-packages/ccui/docs/.vitepress/config/sidebar.ts
-packages/ccui/docs/.vitepress/config/enSidebar.ts
-packages/ccui/docs/.vitepress/config.ts.js
-packages/ccui/build
+packages/lcui/ui/vue-lcui.ts
+packages/lcui/ui/theme/theme.scss
+packages/lcui/ui/theme/darkTheme.css
+packages/lcui/docs/.vitepress/config/sidebar.ts
+packages/lcui/docs/.vitepress/config/enSidebar.ts
+packages/lcui/docs/.vitepress/config.ts.js
+packages/lcui/build
 **CHANGELOG.md
 # test
-packages/ccui/coverage
-packages/ccui/ui/**/__snapshots__
+packages/lcui/coverage
+packages/lcui/ui/**/__snapshots__
 .pnpm-debug.log
