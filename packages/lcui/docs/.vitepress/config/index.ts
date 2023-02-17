@@ -3,7 +3,7 @@ import markdown from './markdown';
 import sidebar from './sidebar';
 
 export default ({ mode }) => {
-  const basePath = mode === 'development' ? '/' : '/lcui/';
+  const basePath = mode === 'development' ? '/' : '/lc-ui/';
 
   return {
     base: basePath,
