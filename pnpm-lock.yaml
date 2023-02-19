@@ -56,7 +56,6 @@ importers:
       fs-extra: ^10.0.1
       inquirer: ^8.2.0
       kolorist: ^1.5.1
-      lcui-cli: ^1.0.0
       lodash: ^4.17.21
       ora: ^5.4.1
       rimraf: ^3.0.2
@@ -64,7 +63,6 @@ importers:
       shelljs: ^0.8.5
       vite: ^2.8.0
     dependencies:
-      lcui-cli: 'link:'
       lodash: 4.17.21
     devDependencies:
       '@babel/parser': 7.18.9
