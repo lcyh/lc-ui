@@ -13,7 +13,7 @@ hero:
       link: /introduce
     - theme: alt
       text: 掘金主页
-      link: https://juejin.cn/user/712139266339694/posts
+      link: https://juejin.cn/user/237150241292861
 features:
   - icon: 🛠️
     title: 丰富的功能
