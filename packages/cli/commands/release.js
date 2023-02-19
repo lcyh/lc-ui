@@ -3,7 +3,7 @@
  * @Description:
  * @LastEditors: luc19964 luochang@gopherasset.com
  * @Date: 2023-02-16 17:16:21
- * @LastEditTime: 2023-02-17 15:25:02
+ * @LastEditTime: 2023-02-18 21:03:20
  * @FilePath: /lcui/packages/cli/commands/release.js
  */
 const path = require('path');
@@ -41,6 +41,7 @@ const createPackageJson = async (version) => {
 };
 
 exports.release = async ({ version }) => {
+  console.log('release>>>>>', version);
   await createPackageJson(version);
   shell.sed('-i', 'workspace:', '', path.resolve(outputDir, 'package.json'));
   shell.cp('-R', path.resolve(__dirname, '../../lcui/README.md'), outputDir);
