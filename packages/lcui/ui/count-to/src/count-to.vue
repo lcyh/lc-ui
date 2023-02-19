@@ -1,5 +1,5 @@
 <template>
-  <span>
+  <span :style="{ color }">
     {{ value }}
   </span>
 </template>

@@ -3,7 +3,7 @@
  * @Description:
  * @LastEditors: luc19964 luochang@gopherasset.com
  * @Date: 2023-02-18 21:53:07
- * @LastEditTime: 2023-02-18 22:42:34
+ * @LastEditTime: 2023-02-19 08:50:28
  * @FilePath: /lcui/packages/lcui/ui/count-to/index.ts
  */
 import type { App } from 'vue';
@@ -16,7 +16,7 @@ CountTo.install = function (app: App): void {
 export { CountTo };
 
 export default {
-  title: 'CountTo Count-to ',
+  title: 'CountTo 数字动画',
   category: '数据展示',
   status: '100%',
   install(app: App): void {
