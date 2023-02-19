@@ -3,7 +3,7 @@
  * @Description:
  * @LastEditors: luc19964 luochang@gopherasset.com
  * @Date: 2023-02-16 17:16:21
- * @LastEditTime: 2023-02-19 08:54:25
+ * @LastEditTime: 2023-02-19 15:51:13
  * @FilePath: /lcui/packages/cli/commands/release.js
  */
 const path = require('path');
@@ -14,6 +14,8 @@ const shell = require('shelljs');
 const outputDir = path.resolve(__dirname, '../../lcui/build');
 
 const packageJson = require('../../lcui/package.json');
+
+const lcUIPackagePath = path.resolve(__dirname, '../../lcui');
 
 const getVersion = (version) => {
   if (version) {
@@ -28,14 +30,21 @@ const getVersion = (version) => {
 
 const createPackageJson = async (version) => {
   packageJson.version = getVersion(version);
-  const fileStr = JSON.stringify(
-    omit(packageJson, 'scripts', 'devDependencies'),
+  let newVersionPkg = packageJson;
+  const fileStr1 = JSON.stringify(newVersionPkg, null, 2);
+  await fsExtra.writeFileSync(
+    path.resolve(lcUIPackagePath, `package.json`),
+    fileStr1,
+    'utf-8'
+  );
+  const fileStr2 = JSON.stringify(
+    omit(newVersionPkg, 'scripts', 'devDependencies'),
     null,
     2
   );
-  await fsExtra.outputFile(
+  await fsExtra.writeFileSync(
     path.resolve(outputDir, `package.json`),
-    fileStr,
+    fileStr2,
     'utf-8'
   );
 };
@@ -57,5 +66,5 @@ exports.release = async ({ version }) => {
     path.resolve(__dirname, '../../lcui/ui/theme/darkTheme.css'),
     path.resolve(outputDir, 'theme')
   );
-  shell.exec('npm publish');
+  // shell.exec('npm publish');
 };

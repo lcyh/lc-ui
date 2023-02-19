@@ -1,4 +1,4 @@
-# CountTo Count-to
+# CountTo 数字动画
 
 // todo 组件描述
 
@@ -44,11 +44,20 @@ export default defineComponent({
 
 c-count-to 参数
 
-| 参数 | 类型 | 默认 | 说明 |
-| ---- | ---- | ---- | ---- |
-|      |      |      |      |
-|      |      |      |      |
-|      |      |      |      |
+| 参数       | 类型    | 默认   | 说明       |
+| ---------- | ------- | ------ | ---------- |
+| startVal   | number  | 0      | 开始值     |
+| endVal     | number  | 2021   | 结束值     |
+| duration   | number  | 1500   | 持续时间   |
+| autoplay   | boolean | true   | 是否自动   |
+| decimals   | number  | 0      | 保留精度   |
+| prefix     | string  |        | 前缀       |
+| suffix     | string  |        | 后缀       |
+| separator  | string  | ,      | 分隔符     |
+| decimal    | string  | .      | 小数点符号 |
+| color      | string  |        | 颜色       |
+| useEasing  | boolean | true   | 动画       |
+| transition | string  | linear | 动画类型   |
 
 c-count-to 事件
 
