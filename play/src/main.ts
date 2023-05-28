@@ -1,6 +1,6 @@
 /*
  * @Author: changluo
- * @Description: 
+ * @Description:
  * @LastEditors: luc19964 luochang@gopherasset.com
  */
 import { createApp } from 'vue';

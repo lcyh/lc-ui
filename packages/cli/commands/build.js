@@ -4,6 +4,7 @@ const fsExtra = require('fs-extra');
 const { defineConfig, build } = require('vite');
 const vue = require('@vitejs/plugin-vue');
 const vueJsx = require('@vitejs/plugin-vue-jsx');
+const dts = require('vite-plugin-dts');
 const nuxtBuild = require('./build-nuxt-auto-import');
 const { isReadyToRelease } = require('../shared/utils');
 
@@ -13,7 +14,14 @@ const outputDir = path.resolve(__dirname, '../../lcui/build');
 const baseConfig = defineConfig({
   configFile: false,
   publicDir: false,
-  plugins: [vue(), vueJsx()]
+  plugins: [
+    vue(),
+    vueJsx(),
+    dts({
+      include: [entryDir, './src'],
+      outputDir: path.resolve(outputDir, './types')
+    })
+  ]
 });
 
 const rollupOptions = {

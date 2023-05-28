@@ -1,5 +1,10 @@
+###
+ # @Author: changluo
+ # @Description: 
+ # @LastEditors: luc19964 luochang@gopherasset.com
+### 
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-# npx @ls-lint/ls-lint && pnpx lint-staged
+ npx @ls-lint/ls-lint && pnpx lint-staged
 

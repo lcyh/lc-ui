@@ -30,7 +30,7 @@ const getVersion = (version) => {
 
 const createPackageJson = async (version) => {
   packageJson.version = getVersion(version);
-  let newVersionPkg = packageJson;
+  const newVersionPkg = packageJson;
   const fileStr1 = JSON.stringify(newVersionPkg, null, 2);
   await fsExtra.writeFileSync(
     path.resolve(lcUIPackagePath, `package.json`),

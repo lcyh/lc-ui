@@ -3,7 +3,7 @@
  * @Description:
  * @LastEditors: luc19964 luochang@gopherasset.com
  * @Date: 2023-02-16 17:16:21
- * @LastEditTime: 2023-02-17 16:18:01
+ * @LastEditTime: 2023-05-27 22:18:13
  * @FilePath: /lcui/packages/cli/commands/generate-dts.js
  */
 const path = require('path');
@@ -11,7 +11,7 @@ const fs = require('fs');
 const fse = require('fs-extra');
 const logger = require('../shared/logger');
 
-const entryDir = path.resolve(__dirname, '../../lcui');
+const entryDir = path.resolve(__dirname, '../../lcui/ui');
 const outputDir = path.resolve(__dirname, '../../lcui/build');
 
 function generateIndexDts(buildDir) {
