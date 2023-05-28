@@ -97,6 +97,7 @@ importers:
       '@types/node': ^20.1.4
       '@vitejs/plugin-vue': ^4.2.3
       '@vitejs/plugin-vue-jsx': ^3.0.1
+      '@vitest/coverage-c8': ^0.31.1
       '@vue/test-utils': ^2.3.2
       '@vueuse/core': ^10.1.2
       c8: ^7.13.0
@@ -117,6 +118,7 @@ importers:
       '@types/node': 20.2.5
       '@vitejs/plugin-vue': 4.2.3_vite@4.3.9+vue@3.2.47
       '@vitejs/plugin-vue-jsx': 3.0.1_vite@4.3.9+vue@3.2.47
+      '@vitest/coverage-c8': 0.31.1_vitest@0.31.1
       '@vue/test-utils': 2.3.2_vue@3.2.47
       '@vueuse/core': 10.1.2_vue@3.2.47
       c8: 7.13.0
@@ -316,6 +318,14 @@ packages:
     dependencies:
       '@jridgewell/gen-mapping': 0.1.1
       '@jridgewell/trace-mapping': 0.3.14
+
+  /@ampproject/remapping/2.2.1:
+    resolution: {integrity: sha512-lFMjJTrFL3j7L9yBxwYfCq2k6qqwHyzuUl/XBnif78PWTJYyL/dfowQHWE3sp6U6ZzqWiiIZnpTMO96zhkjwtg==}
+    engines: {node: '>=6.0.0'}
+    dependencies:
+      '@jridgewell/gen-mapping': 0.3.2
+      '@jridgewell/trace-mapping': 0.3.17
+    dev: true
 
   /@arr/every/1.0.1:
     resolution: {integrity: sha512-UQFQ6SgyJ6LX42W8rHCs8KVc0JS0tzVL9ct4XYedJukskYVWTo49tNiMEK9C2HTyarbNiT/RVIRSY82vH+6sTg==}
@@ -2050,6 +2060,19 @@ packages:
     dependencies:
       vite: 4.3.9_kxkosmzevect5blmp7ly2aqtpa
       vue: 3.2.47
+
+  /@vitest/coverage-c8/0.31.1_vitest@0.31.1:
+    resolution: {integrity: sha512-6TkjQpmgYez7e3dbAUoYdRXxWN81BojCmUILJwgCy39uZFG33DsQ0rSRSZC9beAEdCZTpxR63nOvd9hxDQcJ0g==}
+    peerDependencies:
+      vitest: '>=0.30.0 <1'
+    dependencies:
+      '@ampproject/remapping': 2.2.1
+      c8: 7.13.0
+      magic-string: 0.30.0
+      picocolors: 1.0.0
+      std-env: 3.3.3
+      vitest: 0.31.1_jsdom@22.1.0+sass@1.62.1
+    dev: true
 
   /@vitest/expect/0.31.1:
     resolution: {integrity: sha512-BV1LyNvhnX+eNYzJxlHIGPWZpwJFZaCcOIzp2CNG0P+bbetenTupk6EO0LANm4QFt0TTit+yqx7Rxd1qxi/SQA==}
