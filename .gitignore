@@ -31,6 +31,7 @@ packages/lcui/docs/.vitepress/config/sidebar.ts
 packages/lcui/docs/.vitepress/config/enSidebar.ts
 packages/lcui/docs/.vitepress/config.ts.js
 packages/lcui/build
+packages/lcui/docs/.vitepress/cache
 **CHANGELOG.md
 # test
 packages/lcui/coverage
