@@ -3,11 +3,16 @@
  * @Description: 
  * @LastEditors: luc19964 luochang@gopherasset.com
  * @Date: 2023-02-19 17:18:07
- * @LastEditTime: 2023-02-19 17:41:17
+ * @LastEditTime: 2023-05-27 20:17:25
  * @FilePath: /lcui/play/src/App.vue
 -->
 <script setup lang="ts">
+import { ref } from 'vue';
 import HelloWorld from './components/HelloWorld.vue';
+const curDate = ref(new Date());
+const curDateChange = (val) => {
+  console.log(val);
+};
 </script>
 
 <template>
@@ -19,7 +24,8 @@ import HelloWorld from './components/HelloWorld.vue';
       :endVal="200000"
       :duration="8000"
     />
-    <c-button style="margin: 10px" type="danger" size="small">湖北100</c-button>
+    <c-button style="margin: 10px" type="danger" size="small">湖北1001</c-button>
+    <c-calendar v-model="curDate" @change="curDateChange"></c-calendar>
   </div>
   <div>
     <a href="https://vitejs.dev" target="_blank">
