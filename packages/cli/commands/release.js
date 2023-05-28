@@ -3,7 +3,7 @@
  * @Description:
  * @LastEditors: luc19964 luochang@gopherasset.com
  * @Date: 2023-02-16 17:16:21
- * @LastEditTime: 2023-02-19 15:51:13
+ * @LastEditTime: 2023-05-28 12:28:23
  * @FilePath: /lcui/packages/cli/commands/release.js
  */
 const path = require('path');
@@ -66,5 +66,5 @@ exports.release = async ({ version }) => {
     path.resolve(__dirname, '../../lcui/ui/theme/darkTheme.css'),
     path.resolve(outputDir, 'theme')
   );
-  // shell.exec('npm publish');
+  shell.exec('npm publish');
 };
