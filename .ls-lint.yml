@@ -16,6 +16,7 @@ ignore:
   # lcui
   - packages/lcui/node_modules
   - packages/lcui/docs
+  - packages/cli/docs
   - packages/lcui/build
   - packages/lcui/ui/theme
   - packages/cli/node_modules

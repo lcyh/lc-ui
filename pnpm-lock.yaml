@@ -69,10 +69,12 @@ importers:
       shelljs: ^0.8.5
       vite: ^4.3.5
       vite-plugin-dts: ^2.0.2
+      vitepress: 1.0.0-alpha.10
     dependencies:
       lcui-cli: 'link:'
       lodash: 4.17.21
       vite-plugin-dts: 2.0.2_vite@4.3.9
+      vitepress: 1.0.0-alpha.10_sass@1.62.1
     devDependencies:
       '@babel/parser': 7.22.3
       '@babel/traverse': 7.22.1
@@ -2030,6 +2032,17 @@ packages:
       vue: 3.2.37
     dev: false
 
+  /@vitejs/plugin-vue/3.1.0_vite@3.1.3+vue@3.2.47:
+    resolution: {integrity: sha512-fmxtHPjSOEIRg6vHYDaem+97iwCUg/uSIaTzp98lhELt2ISOQuDo2hbkBdXod0g15IhfPMQmAxh4heUks2zvDA==}
+    engines: {node: ^14.18.0 || >=16.0.0}
+    peerDependencies:
+      vite: ^3.0.0
+      vue: ^3.2.25
+    dependencies:
+      vite: 3.1.3_sass@1.62.1
+      vue: 3.2.47
+    dev: false
+
   /@vitejs/plugin-vue/4.0.0_vite@4.1.4+vue@3.2.47:
     resolution: {integrity: sha512-e0X4jErIxAB5oLtDqbHvHpJe/uWNkdpYV83AOG2xo2tEVSzCzewgJMtREZM30wXnM5ls90hxiOtAuVU6H5JgbA==}
     engines: {node: ^14.18.0 || >=16.0.0}
@@ -2567,6 +2580,18 @@ packages:
       - vue
     dev: false
 
+  /@vueuse/core/9.13.0_vue@3.2.47:
+    resolution: {integrity: sha512-pujnclbeHWxxPRqXWmdkKV5OX4Wk4YeK7wusHqRwU0Q7EFusHoqNA/aPhB6KCh9hEqJkLAJo7bb0Lh9b+OIVzw==}
+    dependencies:
+      '@types/web-bluetooth': 0.0.16
+      '@vueuse/metadata': 9.13.0
+      '@vueuse/shared': 9.13.0_vue@3.2.47
+      vue-demi: 0.14.5_vue@3.2.47
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - vue
+    dev: false
+
   /@vueuse/metadata/10.1.2:
     resolution: {integrity: sha512-3mc5BqN9aU2SqBeBuWE7ne4OtXHoHKggNgxZR2K+zIW4YLsy6xoZ4/9vErQs6tvoKDX6QAqm3lvsrv0mczAwIQ==}
 
@@ -2595,6 +2620,15 @@ packages:
     resolution: {integrity: sha512-UrnhU+Cnufu4S6JLCPZnkWh0WwZGUp72ktOF2DFptMlOs3TOdVv8xJN53zhHGARmVOsz5KqOls09+J1NR6sBKw==}
     dependencies:
       vue-demi: 0.13.5_vue@3.2.44
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - vue
+    dev: false
+
+  /@vueuse/shared/9.13.0_vue@3.2.47:
+    resolution: {integrity: sha512-UrnhU+Cnufu4S6JLCPZnkWh0WwZGUp72ktOF2DFptMlOs3TOdVv8xJN53zhHGARmVOsz5KqOls09+J1NR6sBKw==}
+    dependencies:
+      vue-demi: 0.14.5_vue@3.2.47
     transitivePeerDependencies:
       - '@vue/composition-api'
       - vue
@@ -5288,10 +5322,6 @@ packages:
     engines: {node: '>=6'}
     hasBin: true
 
-  /jsonc-parser/3.1.0:
-    resolution: {integrity: sha512-DRf0QjnNeCUds3xTjKlQQ3DpJD51GvDjJfnxUVWg6PZTo2otSm+slzNAxU/35hF8/oJIKoG9slq30JYOsF2azg==}
-    dev: false
-
   /jsonc-parser/3.2.0:
     resolution: {integrity: sha512-gfFQZrcTc8CnKXp6Y4/CBT3fTc0OVuDofpre4aEeEpSBPV5X5v4+Vmx+8snU7RLPrNHPKSgLxGo9YuQzz20o+w==}
 
@@ -6702,8 +6732,8 @@ packages:
   /shiki/0.11.1:
     resolution: {integrity: sha512-EugY9VASFuDqOexOgXR18ZV+TbFrQHeCpEYaXamO+SZlsnT/2LxuLBX25GGtIrwaEVFXUAbUQ601SWE2rMwWHA==}
     dependencies:
-      jsonc-parser: 3.1.0
-      vscode-oniguruma: 1.6.2
+      jsonc-parser: 3.2.0
+      vscode-oniguruma: 1.7.0
       vscode-textmate: 6.0.0
     dev: false
 
@@ -7594,6 +7624,34 @@ packages:
       fsevents: 2.3.2
     dev: false
 
+  /vite/3.1.3_sass@1.62.1:
+    resolution: {integrity: sha512-/3XWiktaopByM5bd8dqvHxRt5EEgRikevnnrpND0gRfNkrMrPaGGexhtLCzv15RcCMtV2CLw+BPas8YFeSG0KA==}
+    engines: {node: ^14.18.0 || >=16.0.0}
+    hasBin: true
+    peerDependencies:
+      less: '*'
+      sass: '*'
+      stylus: '*'
+      terser: ^5.4.0
+    peerDependenciesMeta:
+      less:
+        optional: true
+      sass:
+        optional: true
+      stylus:
+        optional: true
+      terser:
+        optional: true
+    dependencies:
+      esbuild: 0.15.8
+      postcss: 8.4.23
+      resolve: 1.22.1
+      rollup: 2.78.1
+      sass: 1.62.1
+    optionalDependencies:
+      fsevents: 2.3.2
+    dev: false
+
   /vite/4.1.4:
     resolution: {integrity: sha512-3knk/HsbSTKEin43zHu7jTwYWv81f8kgAL99G5NWBcA1LKvtvcVAC4JjBH1arBunO9kQka+1oGbrMKOjk4ZrBg==}
     engines: {node: ^14.18.0 || >=16.0.0}
@@ -7813,6 +7871,31 @@ packages:
       - terser
     dev: false
 
+  /vitepress/1.0.0-alpha.10_sass@1.62.1:
+    resolution: {integrity: sha512-RGPU+YApj2jaYplAIJUe+2qlDks9FzPX1QGK+7NdGByeCCVZg6z9eYWjjvfvA/sgCtG3yeJE/4/jCwlv4Y8bVw==}
+    hasBin: true
+    dependencies:
+      '@docsearch/css': 3.4.0
+      '@docsearch/js': 3.4.0
+      '@vitejs/plugin-vue': 3.1.0_vite@3.1.3+vue@3.2.47
+      '@vue/devtools-api': 6.5.0
+      '@vueuse/core': 9.13.0_vue@3.2.47
+      body-scroll-lock: 4.0.0-beta.0
+      shiki: 0.11.1
+      vite: 3.1.3_sass@1.62.1
+      vue: 3.2.47
+    transitivePeerDependencies:
+      - '@algolia/client-search'
+      - '@types/react'
+      - '@vue/composition-api'
+      - less
+      - react
+      - react-dom
+      - sass
+      - stylus
+      - terser
+    dev: false
+
   /vitepress/1.0.0-alpha.75_kxkosmzevect5blmp7ly2aqtpa:
     resolution: {integrity: sha512-twpPZ/6UnDR8X0Nmj767KwKhXlTQQM9V/J1i2BP9ryO29/w4hpxBfEum6nvfpNhJ4H3h+cIhwzAK/e9crZ6HEQ==}
     hasBin: true
@@ -7906,10 +7989,6 @@ packages:
       - supports-color
       - terser
     dev: true
-
-  /vscode-oniguruma/1.6.2:
-    resolution: {integrity: sha512-KH8+KKov5eS/9WhofZR8M8dMHWN2gTxjMsG4jd04YhpbPR91fUj7rYQ2/XjeHCJWbg7X++ApRIU9NUwM2vTvLA==}
-    dev: false
 
   /vscode-oniguruma/1.7.0:
     resolution: {integrity: sha512-L9WMGRfrjOhgHSdOYgCt/yRMsXzLDJSL7BPrOZt73gU0iWO4mpqzqQzOz5srxqTvMBaR0XZTSrVWo4j55Rc6cA==}

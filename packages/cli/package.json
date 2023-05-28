@@ -23,7 +23,7 @@
     "lcui-cli": "index.js"
   },
   "scripts": {
-    "build": "pnpm generate:theme && node --max-old-space-size=4096 node_modules/vitepress/bin/vitepress.js build docs && cp ../lcui/docs/assets/* ../lcui/docs/.vitepress/dist/assets",
+    "build": "pnpm generate:theme && node --max-old-space-size=4096 node_modules/vitepress/bin/vitepress.js build docs",
     "build:lib": "pnpm --filter vue3-lcui predev -- prod && pnpm build:components && pnpm changelog && pnpm release",
     "build:components": "node ./index.js build",
     "generate:theme": "node ./index.js generate:theme",
@@ -37,7 +37,8 @@
   "dependencies": {
     "lcui-cli": "^1.0.0",
     "lodash": "^4.17.21",
-    "vite-plugin-dts": "^2.0.2"
+    "vite-plugin-dts": "^2.0.2",
+    "vitepress": "1.0.0-alpha.10"
   },
   "devDependencies": {
     "@babel/parser": "^7.21.8",
@@ -46,6 +47,7 @@
     "@vitejs/plugin-vue-jsx": "^3.0.1",
     "chalk": "^4.1.2",
     "commander": "^10.0.1",
+    "conventional-changelog-cli": "^2.2.2",
     "esbuild": "^0.17.19",
     "esbuild-register": "^3.4.2",
     "fs-extra": "^11.1.1",
@@ -53,9 +55,8 @@
     "kolorist": "^1.8.0",
     "ora": "^5.4.1",
     "rimraf": "^5.0.0",
+    "sass": "^1.62.1",
     "shelljs": "^0.8.5",
-    "vite": "^4.3.5",
-    "conventional-changelog-cli": "^2.2.2",
-    "sass": "^1.62.1"
+    "vite": "^4.3.5"
   }
 }
