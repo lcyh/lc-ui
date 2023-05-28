@@ -36,13 +36,14 @@
       "npm run lint:script",
       "git add ."
     ],
-    "packages**/*.{css,scss}": [
+    "packages/**/*.{css,scss,less}": [
       "npm run lint:style",
       "git add ."
     ]
   },
   "license": "MIT",
   "dependencies": {
-    "lcui-cli": "^1.0.0"
+    "lcui-cli": "^1.0.0",
+    "vitepress": "1.0.0-alpha.10"
   }
 }

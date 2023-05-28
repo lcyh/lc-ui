@@ -33,8 +33,7 @@
     "coverage": "vitest run --coverage"
   },
   "dependencies": {
-    "vitepress-theme-demoblock": "^1.4.2",
-    "vue": "^3.2.37"
+    "vitepress-theme-demoblock": "^1.4.2"
   },
   "devDependencies": {
     "@types/node": "^18.0.5",
@@ -51,9 +50,11 @@
     "vite-svg-loader": "^3.4.0",
     "vitepress": "1.0.0-alpha.10",
     "vitest": "^0.18.1",
+    "vue": "^3.2.37",
     "vue-tsc": "^0.38.4"
   },
   "peerDependencies": {
-    "@vueuse/core": "^9.13.0"
+    "@vueuse/core": "^9.13.0",
+    "vue": "^3.2.37"
   }
 }

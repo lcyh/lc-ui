@@ -17,10 +17,10 @@ const baseConfig = defineConfig({
   plugins: [
     vue(),
     vueJsx(),
-    dts({
-      include: [entryDir, './src'],
-      outputDir: path.resolve(outputDir, './types')
-    })
+    // dts({
+    //   include: [entryDir, './src'],
+    //   outputDir: path.resolve(outputDir, './types')
+    // })
   ]
 });
 
