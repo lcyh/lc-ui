@@ -7,6 +7,7 @@ import { createApp } from 'vue';
 import './style.css';
 import App from './App.vue';
 import { Button, CountTo, Calendar } from 'vue3-lcui';
+// import { Button, CountTo, Calendar } from '../../packages/lcui/ui/vue-lcui';
 import 'vue3-lcui/style.css';
 
 createApp(App).use(Button).use(CountTo).use(Calendar).mount('#app');

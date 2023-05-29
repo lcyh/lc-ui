@@ -5,9 +5,9 @@
   "keywords": [
     "cli"
   ],
-  "author": "cjz",
+  "author": "lc",
   "license": "MIT",
-  "main": "lib/lcui-cli.js",
+  "main": "index.js",
   "directories": {
     "lib": "lib"
   },

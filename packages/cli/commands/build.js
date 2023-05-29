@@ -74,7 +74,7 @@ const createPackageJson = (name) => {
   "name": "${name}",
   "version": "0.0.0",
   "main": "index.umd.js",
-  "module": "index.es.js",
+  "module": "index.mjs",
   "style": "style.css"
 }`;
 
@@ -100,8 +100,8 @@ exports.build = async () => {
     }
     await buildSingle(name);
     createPackageJson(name);
-    nuxtBuild.createAutoImportedComponent(name);
+    // nuxtBuild.createAutoImportedComponent(name);
   }
 
-  nuxtBuild.createNuxtPlugin();
+  // nuxtBuild.createNuxtPlugin();
 };

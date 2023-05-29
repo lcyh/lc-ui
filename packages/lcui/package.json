@@ -1,6 +1,6 @@
 {
   "name": "vue3-lcui",
-  "version": "1.1.8",
+  "version": "1.1.13",
   "license": "MIT",
   "description": "vue3-lcui components based on Vite and Vue3",
   "keywords": [
@@ -21,7 +21,7 @@
     "url": "https://github.com/lcyh/lc-ui.git"
   },
   "main": "vue-lcui.umd.js",
-  "module": "vue-lcui.es.js",
+  "module": "vue-lcui.mjs",
   "style": "style.css",
   "scripts": {
     "dev": "vitepress dev docs",
