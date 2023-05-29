@@ -16,7 +16,7 @@ const baseConfig = defineConfig({
   publicDir: false,
   plugins: [
     vue(),
-    vueJsx(),
+    vueJsx()
     // dts({
     //   include: [entryDir, './src'],
     //   outputDir: path.resolve(outputDir, './types')
