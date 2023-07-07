@@ -37,17 +37,19 @@
   },
   "devDependencies": {
     "@types/node": "^20.1.4",
-    "@vitejs/plugin-vue": "^4.2.3",
-    "@vitejs/plugin-vue-jsx": "^3.0.1",
+    "@vitejs/plugin-vue": "^4.0.0",
+    "@vitejs/plugin-vue-jsx": "^3.0.0",
     "@vitest/coverage-c8": "^0.31.1",
     "@vue/test-utils": "^2.3.2",
     "@vueuse/core": "^10.1.2",
+    "ant-design-vue": "^3.2.0",
     "c8": "^7.13.0",
     "jsdom": "^22.0.0",
     "moment": "^2.29.4",
     "sass": "^1.62.1",
     "typescript": "^5.0.4",
-    "vite": "^4.3.5",
+    "unplugin-vue-components": "^0.25.1",
+    "vite": "^4.1.0",
     "vite-svg-loader": "^3.6.0",
     "vitepress": "1.0.0-alpha.75",
     "vitest": "^0.31.0",
@@ -56,6 +58,7 @@
   },
   "peerDependencies": {
     "@vueuse/core": "^10.1.2",
-    "vue": "^3.2.45"
+    "ant-design-vue": "^3.2.0",
+    "vue": "^3.2.33"
   }
 }

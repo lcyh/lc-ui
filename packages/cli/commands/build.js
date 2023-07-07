@@ -25,7 +25,13 @@ const baseConfig = defineConfig({
 });
 
 const rollupOptions = {
-  external: ['vue', 'vue-router', '@vueuse/core', '@floating-ui/dom'],
+  external: [
+    'vue',
+    'vue-router',
+    '@vueuse/core',
+    '@floating-ui/dom',
+    'ant-design-vue'
+  ],
   output: {
     globals: {
       vue: 'Vue'
