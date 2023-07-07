@@ -13,7 +13,7 @@
 
 ```vue
 <template>
-  <c-vue-demo>{{ msg }}</c-vue-demo>
+  <c-vue-demo type="primary">{{ msg }}</c-vue-demo>
 </template>
 
 <script>
@@ -21,7 +21,7 @@ import { defineComponent } from 'vue';
 export default defineComponent({
   setup() {
     return {
-      msg: 'VueDemo vueDemo 组件文档示例'
+      msg: 'ant-design按钮'
     };
   }
 });

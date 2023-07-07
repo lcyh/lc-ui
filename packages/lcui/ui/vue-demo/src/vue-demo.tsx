@@ -13,10 +13,13 @@ export default defineComponent({
   props: vueDemoProps,
   emits: [],
   setup(props: VueDemoProps, { slots }) {
+    console.log('props', props)
     return () => {
       return (
         <div class="lcui-vue-demo">
-          <Button type="primary">ant按钮</Button>
+          <Button {...props}>
+            {slots.default && slots.default()}
+          </Button>
         </div>
       )
     }

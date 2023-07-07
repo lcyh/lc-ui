@@ -1,9 +1,21 @@
-import type { PropType, ExtractPropTypes } from 'vue'
-
+/*
+ * @Author: changluo
+ * @Description:
+ * @LastEditors: luc19964 luochang@gopherasset.com
+ */
+import type { PropType, ExtractPropTypes } from 'vue';
+export type ButtonType =
+  | 'primary'
+  | 'success'
+  | 'warning'
+  | 'danger'
+  | 'info'
+  | 'text';
 export const vueDemoProps = {
-  /* test: {
-    type: Object as PropType<{ xxx: xxx }>
-  } */
-} as const
+  type: {
+    type: Object as PropType<ButtonType>,
+    default: ''
+  }
+} as const;
 
-export type VueDemoProps = ExtractPropTypes<typeof vueDemoProps>
+export type VueDemoProps = ExtractPropTypes<typeof vueDemoProps>;
